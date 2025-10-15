@@ -41,11 +41,9 @@ class Calculadora:
         return self.operaciones[operacion].ejecutar(a, b)
 
     def añadir_operacion(self, nombre, operacion):
-        """Permite añadir nuevas operaciones sin modificar el código base."""
+        # Nuevas operaciones
         self.operaciones[nombre] = operacion
 
-# Nueva operación añadida luego
-# -------------------------------
 class Potencia(Operacion):
     def ejecutar(self, a: float, b: float) -> float:
         return a ** b
